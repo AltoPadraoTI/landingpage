@@ -11986,7 +11986,7 @@ select.form-control.form-control-soft-dark:focus::-ms-value{
 }
 .btn-soft-white{
     color:#fff;
-    background:rgba(255,255,255,0.1);
+    background:rgba(255,255,255,0.3);
     border-color:transparent
 }
 .btn-soft-white.active,.btn-soft-white:active,.btn-soft-white:focus,.btn-soft-white:hover{
