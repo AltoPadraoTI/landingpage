@@ -4286,6 +4286,7 @@ a.badge-white.focus,a.badge-white:focus{
         animation:none
     }
 }
+
 .media{
     display:flex;
     align-items:flex-start
@@ -13037,7 +13038,7 @@ body.loaded>div.loader{
 }
 @media (max-width:575px){
     .portfolio-item .item-media .media-container{
-        height:70vh
+        height:30vh
     }
 }
 @media (min-width:576px){
