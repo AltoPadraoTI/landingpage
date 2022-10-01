@@ -22,43 +22,86 @@
       <link rel="stylesheet" href="assets/css/theme.css">
       <script src="https://www.googleoptimize.com/optimize.js?id=OPT_CONTAINER_ID"></script>
       <style>
-        * {box-sizing: border-box}
-        .Slides1, .Slides2, .Slides3, .Slides4, .Slides11 {display: block}
-        img {vertical-align: middle;}
-
-        /* Slideshow container */
-        .slideshow-container {
-          max-width: 1000px;
-          position: relative;
-          margin: auto;
-        }
-
-        /* Next & previous buttons */
-        .prev, .next {
-          cursor: pointer;
-          position: absolute;
-          top: 50%;
-          width: auto;
-          padding: 16px;
-          margin-top: -22px;
-          color: white;
-          font-weight: bold;
-          font-size: 18px;
-          transition: 0.6s ease;
-          border-radius: 0 3px 3px 0;
-        }
-
-        /* Position the "next button" to the right */
-        .next {
-          right: 0;
-          border-radius: 3px 0 0 3px;
-        }
-
-        /* On hover, add a grey background color */
-        .prev:hover, .next:hover {
-          background-color: #f1f1f1;
-          color: black;
-        }
+         * {box-sizing:border-box}
+         body {font-family: Verdana,sans-serif;margin:0}
+         .mySlides {display:none; width: 100%;}
+         /* Slideshow container */
+         .slideshow { /*NOT slideshow-container*/
+         max-width: 1000px;
+         position: relative;
+         margin: auto;
+         }
+         /* Next & previous buttons */
+         .prev, .next {
+         cursor: pointer;
+         position: absolute;
+         top: 50%;
+         width: auto;
+         padding: 16px;
+         margin-top: -22px;
+         color: white;
+         font-weight: bold;
+         font-size: 18px;
+         transition: 0.6s ease;
+         border-radius: 0 3px 3px 0;
+         }
+         /* Position the "next button" to the right */
+         .next {
+         right: 0;
+         border-radius: 3px 0 0 3px;
+         }
+         /* On hover, add a black background color with a little bit see-through */
+         .prev:hover, .next:hover {
+         background-color: rgba(0,0,0,0.8);
+         }
+         /* Caption text */
+         .text {
+         color: #f2f2f2;
+         font-size: 15px;
+         padding: 8px 12px;
+         position: absolute;
+         bottom: 8px;
+         width: 100%;
+         text-align: center;
+         }
+         /* Number text (1/3 etc) */
+         .numbertext {
+         color: #f2f2f2;
+         font-size: 12px;
+         padding: 8px 12px;
+         position: absolute;
+         top: 0;
+         }
+         /* The dots/bullets/indicators */
+         .dot {
+         cursor:pointer;
+         height: 13px;
+         width: 13px;
+         margin: 0 2px;
+         background-color: #bbb;
+         border-radius: 50%;
+         display: inline-block;
+         transition: background-color 0.6s ease;
+         }
+         /* Fading animation */
+         .fade {
+         -webkit-animation-name: fade;
+         -webkit-animation-duration: 1.5s;
+         animation-name: fade;
+         animation-duration: 1.5s;
+         }
+         @-webkit-keyframes fade {
+         from {opacity: .4}
+         to {opacity: 1}
+         }
+         @keyframes fade {
+         from {opacity: .4}
+         to {opacity: 1}
+         }
+         /* On smaller screens, decrease text size */
+         @media only screen and (max-width: 300px) {
+         .prev, .next,.text {font-size: 11px}
+         }
       </style>
    </head>
    <!-- Google tag (gtag.js) -->
@@ -336,25 +379,15 @@
                               <div class="item-media">
                                  <div class="media-container">
                                     <!-- Slideshow container -->
-                                    <div class="slideshow-container">
-                                       <div class="Slides1">
-                                          <a href="assets/images/portfolio/AMALFI/1.jpeg" class="mfp-image">
-                                          <img src="assets/images/portfolio/AMALFI/1.jpeg" style="width:100%;"></a>
+                                    <div class="slideshow w3-container w3-half">
+                                       <div class="w3-content w3-display-container">
+                                          <img class="mySlides" src="assets/images/portfolio/AMALFI/1.jpeg">
+                                          <img class="mySlides" src="assets/images/portfolio/AMALFI/2.jpeg">
+                                          <img class="mySlides" src="assets/images/portfolio/AMALFI/3.jpeg">
+                                          <img class="mySlides" src="assets/images/portfolio/AMALFI/4.jpeg">
+                                          <a class="prev" onclick="plusDivs(-1, 0)">&#10094;</a>
+                                          <a class="next" onclick="plusDivs(1, 0)">&#10095;</a>
                                        </div>
-                                       <div class="Slides1">
-                                          <a href="assets/images/portfolio/AMALFI/2.jpeg" class="mfp-image">
-                                          <img src="assets/images/portfolio/AMALFI/2.jpeg" style="width:100%;"></a>
-                                       </div>
-                                       <div class="Slides1">
-                                          <a href="assets/images/portfolio/AMALFI/3.jpeg" class="mfp-image">
-                                          <img src="assets/images/portfolio/AMALFI/3.jpeg" style="width:100%;"></a>
-                                       </div>
-                                       <div class="Slides1">
-                                          <a href="assets/images/portfolio/AMALFI/4.jpeg" class="mfp-image">
-                                          <img src="assets/images/portfolio/AMALFI/4.jpeg" style="width:100%;"></a>
-                                       </div>
-                                       <a class="prev" onclick="plusSlides(-1, 0)">&#10094;</a>
-                                       <a class="next" onclick="plusSlides(1, 1)">&#10095;</a>
                                     </div>
                                     <!--<div class="bg-image-holder bg-cover">
                                        <img src="assets/images/portfolio/AMALFI.webp" alt="">
@@ -383,17 +416,13 @@
                               <div class="item-media">
                                  <div class="media-container">
                                     <!-- Slideshow container -->
-                                    <div class="slideshow-container">
-                                       <div class="Slides2">
-                                          <a href="assets/images/portfolio/Alphaville/1.jpg" class="mfp-image">
-                                          <img src="assets/images/portfolio/Alphaville/1.jpg" style="width:100%;"></a>
+                                    <div class="slideshow w3-container w3-half">
+                                       <div class="w3-content w3-display-container">
+                                          <img class="mySlides" src="assets/images/portfolio/Alphaville/1.jpg">
+                                          <img class="mySlides" src="assets/images/portfolio/Alphaville/2.jpg">
+                                          <a class="prev" onclick="plusDivs(-1, 1)">&#10094;</a>
+                                          <a class="next" onclick="plusDivs(1, 1)">&#10095;</a>
                                        </div>
-                                       <div class="Slides2">
-                                          <a href="assets/images/portfolio/Alphaville/2.jpg" class="mfp-image">
-                                          <img src="assets/images/portfolio/Alphaville/2.jpg" style="width:100%;"></a>
-                                       </div>
-                                       <a class="prev" onclick="plusSlides(-1, 1)">&#10094;</a>
-                                       <a class="next" onclick="plusSlides(1, 1)">&#10095;</a>
                                     </div>
                                     <!--<div class="bg-image-holder bg-cover">
                                        <img src="assets/images/portfolio/Alphaville.webp" alt="">
@@ -422,29 +451,16 @@
                               <div class="item-media">
                                  <div class="media-container">
                                     <!-- Slideshow container -->
-                                    <div class="slideshow-container">
-                                       <div class="Slides3">
-                                          <a href="assets/images/portfolio/Pallace/1.jpg" class="mfp-image">
-                                          <img src="assets/images/portfolio/Pallace/1.jpg" style="width:100%;"></a>
+                                    <div class="slideshow w3-container w3-half">
+                                       <div class="w3-content w3-display-container">
+                                          <img class="mySlides" src="assets/images/portfolio/Pallace/1.jpg">
+                                          <img class="mySlides" src="assets/images/portfolio/Pallace/2.jpg">
+                                          <img class="mySlides" src="assets/images/portfolio/Pallace/3.jpg">
+                                          <img class="mySlides" src="assets/images/portfolio/Pallace/4.jpg">
+                                          <img class="mySlides" src="assets/images/portfolio/Pallace/5.jpg">
+                                          <a class="prev" onclick="plusDivs(-1, 2)">&#10094;</a>
+                                          <a class="next" onclick="plusDivs(1, 2)">&#10095;</a>
                                        </div>
-                                       <div class="Slides3">
-                                          <a href="assets/images/portfolio/Pallace/2.jpg" class="mfp-image">
-                                          <img src="assets/images/portfolio/Pallace/2.jpg" style="width:100%;"></a>
-                                       </div>
-                                       <div class="Slides3">
-                                          <a href="assets/images/portfolio/Pallace/3.jpg" class="mfp-image">
-                                          <img src="assets/images/portfolio/Pallace/3.jpg" style="width:100%;"></a>
-                                       </div>
-                                       <div class="Slides3">
-                                          <a href="assets/images/portfolio/Pallace/4.jpg" class="mfp-image">
-                                          <img src="assets/images/portfolio/Pallace/4.jpg" style="width:100%;"></a>
-                                       </div>
-                                       <div class="Slides3">
-                                          <a href="assets/images/portfolio/Pallace/5.jpg" class="mfp-image">
-                                          <img src="assets/images/portfolio/Pallace/5.jpg" style="width:100%;"></a>
-                                       </div>
-                                       <a class="prev" onclick="plusSlides(-1, 0)">&#10094;</a>
-                                       <a class="next" onclick="plusSlides(1, 1)">&#10095;</a>
                                     </div>
                                     <!--<div class="bg-image-holder bg-cover">
                                        <img src="assets/images/portfolio/Pallace.webp" alt="">
@@ -982,28 +998,42 @@
       <script src="assets/vendor/slick/slick.min.js"></script>
       <script src="assets/vendor/vegas/vegas.min.js"></script>
       <script>
-        let slideIndex = [1,1];
-        let slideId = ["Slides1", "Slides2", "Slides3", "Slides4", "Slides11"]
-        showSlides(1, 0);
-        showSlides(1, 1);
-        showSlides(1, 2);
-        showSlides(1, 3);
-        showSlides(1, 4);
-
-        function plusSlides(n, no) {
-          showSlides(slideIndex[no] += n, no);
-        }
-
-        function showSlides(n, no) {
-          let i;
-          let x = document.getElementsByClassName(slideId[no]);
-          if (n > x.length) {slideIndex[no] = 1}
-          if (n < 1) {slideIndex[no] = x.length}
-          for (i = 0; i < x.length; i++) {
-             x[i].style.display = "none";
-          }
-          x[slideIndex[no]-1].style.display = "block";
-        }
+         var slideIndex = 1;
+         var z = document.getElementsByClassName("slideshow");
+         for (i = 0; i < z.length; i++) {
+             //set custom data attribute to first current image index
+             z[i].setAttribute("data-currentslide", 1);
+             showDivs(z[i].getAttribute("data-currentslide"), i);
+         }
+         function plusDivs(n, j) {
+             //get custom data attribute value of current image index to slideshow class index j
+             slideIndex = parseInt(z[j].getAttribute("data-currentslide"));
+             showDivs(slideIndex += n, j);
+         }
+         function currentDiv(n, j) {
+             showDivs(slideIndex = n, j); /* showDivs Not showSlides*/
+         }
+         function showDivs(n, j) {
+             var i;
+             var z = document.getElementsByClassName("slideshow")[j];
+             var x = z.getElementsByClassName("mySlides");
+             var dots = z.getElementsByClassName("dot");
+             if (n > x.length) {
+                 slideIndex = 1
+             }
+             if (n < 1) {
+                 slideIndex = x.length;
+             }
+             //set custom data attribute to current image index
+             z.setAttribute("data-currentslide", slideIndex);
+             for (i = 0; i < x.length; i++) {
+                 x[i].style.display = "none";
+             }
+             for (i = 0; i < dots.length; i++) {
+                 dots[i].className = dots[i].className.replace(" active", "");
+             }
+             x[slideIndex - 1].style.display = "block";
+         }
       </script>
       <!-- Theme JS -->
       <script src="assets/js/main.js"></script>
