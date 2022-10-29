@@ -24,7 +24,7 @@
       <!-- Required Meta Tags -->
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-      <meta name="description" content="Bootstrap HTML template and UI kit by Erilisdesign">
+      <meta name="description" content="Bootstrap HTML UI by Victor Nunes: @vctrnns">
       <!-- Libs CSS -->
       <link rel="stylesheet" href="assets/vendor/fullPage.js/dist/jquery.fullpage.min.css" type="text/css">
       <link rel="stylesheet" href="assets/vendor/slick/slick.min.css" type="text/css">
@@ -155,6 +155,9 @@
                <li class="nav-item" data-menuanchor="home">
                   <a class="nav-link" href="#home">Home</a>
                </li>
+               <!--<li class="nav-item" data-menuanchor="form">
+                  <a class="nav-link" href="#form">Form de Cadastro</a>
+               </li>-->
                <li class="nav-item" data-menuanchor="institucional">
                   <a class="nav-link" href="#institucional">Institucional</a>
                </li>
@@ -247,6 +250,69 @@
                </div>
             </div>
          </section>
+         <!-- Section - Form -->
+         <section class="ln-section d-xl-flex" data-anchor="what-we-do" data-tooltip="form" data-overlay-color="#2d5aec" data-overlay-opacity="90">
+            <div class="overlay overlay-advanced">
+              <div class="overlay-inner bg-image-holder bg-cover">
+                <img src="assets/images/image-2.jpeg" alt="background">
+              </div>
+              <div class="overlay-inner bg-dark opacity-50"></div>
+            </div>
+            <div class="container align-self-xl-center text-white">
+
+              <div class="row">
+                <div class="col-12 col-xl-5 mb-8 mb-xl-0">
+                  <h2 class="animated mb-4" data-animation="fadeInUp">Nossos serviços</h2>
+                  <p class="animated" data-animation="fadeInUp" data-animation-delay="150"><span>Entre em contato com os nossos corretores pelo telefone (86) 99414-1738, ou nos faça uma visita: Av. Lindolfo Monteiro, 1210, Bairro de Fátima.</span></p>
+                </div>
+                <div class="col-12 col-lg-6 offset-lg-1 animated" data-animation="fadeInUp" data-animation-delay="150">
+                   <div class="contato-form">
+                     <form class="mb-0" id="cf" name="cf" action="https://preview.erilisdesign.com/html/lana/include/sendemail.php" method="post" autocomplete="off">
+                       <div class="form-row">
+
+                         <div class="col-12 col-md-6">
+                           <div class="form-group">
+                             <input type="text" id="cf-name" name="cf-name" placeholder="Enter your name" class="form-control required">
+                           </div>
+                         </div>
+
+                         <div class="col-12 col-md-6">
+                           <div class="form-group">
+                             <input type="email" id="cf-email" name="cf-email" placeholder="Enter your email address" class="form-control required">
+                           </div>
+                         </div>
+
+                         <div class="col-12">
+                           <div class="form-group">
+                             <input type="text" id="cf-subject" name="cf-subject" placeholder="Subject (Optional)" class="form-control">
+                           </div>
+                         </div>
+
+                         <div class="col-12 mb-4">
+                           <div class="form-group">
+                             <textarea name="cf-message" id="cf-message" placeholder="Here goes your message" class="form-control required" rows="7"></textarea>
+                           </div>
+                         </div>
+
+                         <div class="col-12 d-none">
+                           <input type="text" id="cf-botcheck" name="cf-botcheck" value="">
+                         </div>
+
+                         <input type="hidden" name="prefix" value="cf-">
+
+                         <div class="col-12">
+                           <button class="btn btn-soft-white" type="submit" id="cf-submit" name="cf-submit">Send Message</button>
+                         </div>
+
+                       </div>
+                     </form>
+                     <div class="contato-form-result"></div>
+                   </div>
+                  </div>
+              </div>
+
+            </div>
+         </section>
          <!-- Section - Our mission -->
          <section class="ln-section d-xl-flex" data-anchor="institucional" data-tooltip="Our mission" data-overlay-color="#00050e" data-overlay-opacity="90">
             <div class="overlay overlay-advanced">
@@ -267,74 +333,8 @@
                </div>
             </div>
          </section>
-         <!-- Section - What we do -->
-         <!--<section class="ln-section d-xl-flex" data-anchor="what-we-do" data-tooltip="What we do" data-overlay-color="#2d5aec" data-overlay-opacity="90">
-            <div class="overlay overlay-advanced">
-              <div class="overlay-inner bg-image-holder bg-cover">
-                <img src="assets/images/image-2.jpeg" alt="background">
-              </div>
-              <div class="overlay-inner bg-dark opacity-50"></div>
-            </div>
-            <div class="container align-self-xl-center text-white">
 
-              <div class="row">
-                <div class="col-12 col-xl-5 mb-8 mb-xl-0">
-                  <h2 class="animated mb-4" data-animation="fadeInUp">Nossos serviços</h2>
-                  <p class="animated" data-animation="fadeInUp" data-animation-delay="150"><span>Entre em contato com os nossos corretores pelo telefone (86) 99414-1738, ou nos faça uma visita: Av. Lindolfo Monteiro, 1210, Bairro de Fátima.</span></p>
-                </div>
-                <div class="col-12 col-xl-6 offset-xl-1">
-                  <div class="row">
-
-                    <div class="col-md-6 col-sm-6 mb-8 animated" data-animation="fadeInUp">
-                      <div class="icon-7x mb-4">
-                        <i class="ti-timer"></i>
-                      </div>
-                      <h3 class="h4 mb-0">Exemplo 1</h3>
-                    </div>
-
-                    <div class="col-md-6 col-sm-6 mb-8 animated" data-animation="fadeInUp" data-animation-delay="150">
-                      <div class="icon-7x mb-4">
-                        <i class="ti-brush-alt"></i>
-                      </div>
-                      <h3 class="h4 mb-0">Exemplo 2</h3>
-                    </div>
-
-                    <div class="col-md-6 col-sm-6 mb-8 animated" data-animation="fadeInUp" data-animation-delay="300">
-                      <div class="icon-7x mb-4">
-                        <i class="ti-book"></i>
-                      </div>
-                      <h3 class="h4 mb-0">Exemplo 3</h3>
-                    </div>
-
-                    <div class="col-md-6 col-sm-6 mb-8 animated" data-animation="fadeInUp" data-animation-delay="450">
-                      <div class="icon-7x mb-4">
-                        <i class="ti-layers"></i>
-                      </div>
-                      <h3 class="h4 mb-0">Exemplo 4</h3>
-                    </div>
-
-                    <div class="col-md-6 col-sm-6 mb-8 mb-sm-0 animated" data-animation="fadeInUp" data-animation-delay="600">
-                      <div class="icon-7x mb-4">
-                        <i class="ti-settings"></i>
-                      </div>
-                      <h3 class="h4 mb-0">Exemplo 5</h3>
-                    </div>
-
-                    <div class="col-md-6 col-sm-6 animated" data-animation="fadeInUp" data-animation-delay="750">
-                      <div class="icon-7x mb-4">
-                        <i class="ti-headphone-alt"></i>
-                      </div>
-                      <h3 class="h4 mb-0">Exemplo 6</h3>
-                    </div>
-
-                  </div>
-                </div>
-              </div>
-
-            </div>
-            </section>
-
-            <section class="ln-section d-xl-flex" data-anchor="our-solutions" data-tooltip="Our solutions" data-overlay-color="#00050e" data-overlay-opacity="90">
+         <!--<section class="ln-section d-xl-flex" data-anchor="our-solutions" data-tooltip="Our solutions" data-overlay-color="#00050e" data-overlay-opacity="90">
             <div class="overlay overlay-advanced">
               <div class="overlay-inner bg-image-holder bg-cover">
                 <img src="assets/images/image-3.jpg" alt="background">
@@ -372,7 +372,7 @@
 
               </div>
             </div>
-            </section>-->
+         </section>-->
          <!-- Section - Imóveis -->
          <section class="ln-section d-xl-flex" data-anchor="imoveis" data-tooltip="Imóveis" data-overlay-color="#00050e" data-overlay-opacity="80">
             <div class="overlay overlay-advanced">
@@ -821,51 +821,7 @@
                         </div>
                      </div>
                   </div>
-                  <!--<div class="col-12 col-lg-6 offset-lg-1 animated" data-animation="fadeInUp" data-animation-delay="150">
-                     <div class="contato-form">
-                       <form class="mb-0" id="cf" name="cf" action="https://preview.erilisdesign.com/html/lana/include/sendemail.php" method="post" autocomplete="off">
-                         <div class="form-row">
-
-                           <div class="col-12 col-md-6">
-                             <div class="form-group">
-                               <input type="text" id="cf-name" name="cf-name" placeholder="Enter your name" class="form-control required">
-                             </div>
-                           </div>
-
-                           <div class="col-12 col-md-6">
-                             <div class="form-group">
-                               <input type="email" id="cf-email" name="cf-email" placeholder="Enter your email address" class="form-control required">
-                             </div>
-                           </div>
-
-                           <div class="col-12">
-                             <div class="form-group">
-                               <input type="text" id="cf-subject" name="cf-subject" placeholder="Subject (Optional)" class="form-control">
-                             </div>
-                           </div>
-
-                           <div class="col-12 mb-4">
-                             <div class="form-group">
-                               <textarea name="cf-message" id="cf-message" placeholder="Here goes your message" class="form-control required" rows="7"></textarea>
-                             </div>
-                           </div>
-
-                           <div class="col-12 d-none">
-                             <input type="text" id="cf-botcheck" name="cf-botcheck" value="">
-                           </div>
-
-                           <input type="hidden" name="prefix" value="cf-">
-
-                           <div class="col-12">
-                             <button class="btn btn-soft-white" type="submit" id="cf-submit" name="cf-submit">Send Message</button>
-                           </div>
-
-                         </div>
-                       </form>
-                       <div class="contato-form-result"></div>
-                     </div>
-                     </div>-->
-               </div>
+                </div>
             </div>
          </section>
       </div>
